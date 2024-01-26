@@ -4,27 +4,27 @@
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/a82a409f-655b-4b01-ab7f-62bf5b226005)
 
-1.2 Choose Amazon Linux 2
+2.2 Choose Amazon Linux 2
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/ca53fae6-841c-4fea-a688-7b0f8e7a2fff)
 
-1.3 Choose t2.micro
+2.3 Choose t2.micro
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/ff9ece02-6ca4-4d22-8594-22777d71efcb)
 
-1.4 Create new key pair
+2.4 Create new key pair
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/d06dfffe-9916-47e8-8dbc-0b28dbedb249)
 
-1.5 Create a new Security Group
+2.5 Create a new Security Group
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/175db926-273d-49d4-95c6-9bcdb2eb8644)
 
-1.6 Add inbound rule of SSH and HTTP
+2.6 Add inbound rule of SSH and HTTP
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/a02b1189-768e-44e6-a084-056ee637db4b)
 
-1.7 Go to User Data under Advanced Details and paste the following script
+2.7 Go to User Data under Advanced Details and paste the following script
 
 #!/bin/bash			
 sudo su		
@@ -48,7 +48,7 @@ Note : The above script creates an HTML page served by Apache HTTP Server.
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/0ebd1076-7466-43eb-b8fb-1db79c18e501)
 
-3.3 
+3.3 Choose t2.micro
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/b786a95f-1207-4eeb-87b9-025e2f5930ea)
 
@@ -60,7 +60,7 @@ Note : The above script creates an HTML page served by Apache HTTP Server.
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/3c903fde-7df4-4fad-aad9-805174010b4d)
 
-3.6 User Data 
+3.6 Enter the script in User Data in Advanced Settings
 
 #!/bin/bash		
 sudo su		
@@ -79,18 +79,17 @@ echo "Hello I am your Web Server 2" > /var/www/html/index.html
 
 
 ###  Task 4 Creating a Target Group 
-.1 Go to Target Groups in the left-side panel under Load Balancer in the Load Balancing section.
+4.1 Go to Target Groups in the left-side panel under Load Balancer in the Load Balancing section.
 
-.2 Choose Instances from Basic configuration
+4.2 Choose Instances from Basic configuration
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/e8d5b2ef-0175-45a8-a513-58e8cb6ce6df)
 
-.3 Give Target Group name as webserverTG
+4.3 Give Target Group name as webserverTG
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/d410700d-bbfc-4341-97b8-642f2b579669)
 
-
-.4 Health Checks:
+4.4 Health Checks:
 
 Health check protocol : Select HTTP
 Health check path : Enter /index.html
@@ -107,24 +106,22 @@ Success code : 200 (Default)
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/6fea1f25-78a9-46dd-98d5-50ef5b5b67f8)
 
-.5 Leave everything as default and click on Next button.
+4.5 Leave everything as default and click on Next button.
 
-.6 Register targets:
+4.6 Register targets:
 * Select the two instances we have created i.e demo web server 1 and demo web server 2
-Click on Include as pending below and scroll down.
+* Click on Include as pending below and scroll down.
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/12f3047e-a0e0-4ab1-9da1-0027dc239763)
 
-.7 Click on Create target group button.   
-
-.8 Your Target group has been successfully created.
+4.7 Click on Create target group button.   
+4.8 Your Target group has been successfully created.
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/66708587-6c28-4738-9c33-a34565d34d62)
 
 ### Task 5 Creating an Application Load Balancer
 5.1 Navigate to Load Balancers in the left-side panel under Load Balancing. Create Load Balancer
 5.2 Choose Application Load Balancer since we are testing the high availability of the web application and click on Create button.
-
 5.3 Enter Web-Server-Load-Balancer
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/12738659-0cd2-4941-b2c1-60c31852b283)
@@ -150,8 +147,8 @@ Default action: Select webserverTG from the drop-down menu
 
 5.8. You have successfully created Application Load Balancer.
 
-
 ### Task 6 Configuring the Load Balancer to store Access logs in S3 bucket
+
 6.1 Go to Load Balancers and then select the load balancer that you have created in the above step.
 * Click on Actions and then click on Edit load balancer attributes to enable the access log feature.
   
@@ -202,7 +199,7 @@ Example DNS URL: Web-Server-Load-Balancer-1326461726.us-east-1.elb.amazonaws.com
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/0cdac5f0-d3a4-4fb1-8357-6ba68414503a)
 
-* Refresh the browser couple of times and you will see the request is serving from both servers .i.e you will see the response either of the following two:  
+7.2 Refresh the browser couple of times and you will see the request is serving from both servers .i.e you will see the response either of the following two:  
 
 Hello I am your Web Server 1
 
@@ -210,16 +207,15 @@ Hello I am your Web Server 2
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/a96cc43a-36f6-4396-b5d3-9257bde04a8d)
 
-
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/7ab44039-3c92-469f-93d9-ad07dc9440b1)
 
 
 
-7.2 Navigate to the S3 console and enter into the bucket that you created to store ELB access logs. You will find the access logs under AWSLogs folder
+7.3 Navigate to the S3 console and enter into the bucket that you created to store ELB access logs. You will find the access logs under AWSLogs folder
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/97b9eac6-7ae1-465c-8730-84d2dd87d89c)
 
-7.3 Click on the directory containing the load balancer URL to see whether the access logs are in the bucket. You should see a new folder as shown below.
+7.4 Click on the directory containing the load balancer URL to see whether the access logs are in the bucket. You should see a new folder as shown below.
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/98971834-c6ce-4a1d-b1e3-94692cac08bd)
 
@@ -238,10 +234,9 @@ Note: Only 1 file will be created, and it will be updated as you access the ELB 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/521e95ae-e8ef-4bf9-87d0-7668d2556917)
 
 
-
 Do you know ?
 
-Storing ELB access logs in S3 enables seamless integration with other AWS analytics services, such as Amazon Athena, Amazon Redshift, or Amazon EMR (Elastic MapReduce). 
-You can directly query and analyze your log data using these services, gaining valuable insights into your application's performance and user behavior.
+### Storing ELB access logs in S3 enables seamless integration with other AWS analytics services, such as Amazon Athena, Amazon Redshift, or Amazon EMR (Elastic MapReduce). 
+### You can directly query and analyze your log data using these services, gaining valuable insights into your application's performance and user behavior.
 
 
