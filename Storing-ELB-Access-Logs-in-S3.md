@@ -170,7 +170,8 @@ Default action: Select webserverTG from the drop-down menu
 * Click on the bucket created and click on the Permissions tab.
 * Scroll down to Bucket Policy and click on Edit button.
 * Paste the policy and replace the Bucket ARN in the code.
-  
+
+'''
 {		
 "Version": "2012-10-17",
     "Statement": [	
@@ -185,6 +186,7 @@ Default action: Select webserverTG from the drop-down menu
         }	
     ]		
 }	
+'''
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/6c65fc5c-455d-40f1-b8ba-b1675110114f)
 
