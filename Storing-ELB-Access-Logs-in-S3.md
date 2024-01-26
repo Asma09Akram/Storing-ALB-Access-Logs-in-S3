@@ -227,6 +227,8 @@ Hello I am your Web Server 2
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/cdf854a4-ea83-4347-8236-58106675e60a)
 
+![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/521e95ae-e8ef-4bf9-87d0-7668d2556917)
+
 * You can download the generated access log files (.zip file) to your local machine for review.
 *The log file will be present in a hierarchy, which goes like this:
 
@@ -237,7 +239,6 @@ Hello I am your Web Server 2
 * Your log file entry will look like something like the snippet below:
 Note: Only 1 file will be created, and it will be updated as you access the ELB DNS more.
 
-![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/521e95ae-e8ef-4bf9-87d0-7668d2556917)
 
 
 Do you know ?
