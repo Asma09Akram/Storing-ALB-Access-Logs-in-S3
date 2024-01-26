@@ -162,7 +162,7 @@ Default action: Select webserverTG from the drop-down menu
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/80a0727e-789f-4667-910e-21a4797621bc)
 
-6.3 Click on View button and you will be redirected to S3 Console or if it not works you can click on this S3 console link. 
+6.3 Click on View button and you will be redirected to S3 Console or if it not works you can go to S3 from Services. 
 
 * Click on Create bucket button and Enter any unique bucket name.
 * AWS Region: Select US East (N. Virginia) us-east-1
