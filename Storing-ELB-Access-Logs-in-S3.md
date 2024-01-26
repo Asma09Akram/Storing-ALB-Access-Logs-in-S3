@@ -25,7 +25,7 @@
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/a02b1189-768e-44e6-a084-056ee637db4b)
 
 2.7 Go to User Data under Advanced Details and paste the following script
-
+```
 #!/bin/bash			
 sudo su		
 yum update -y		
@@ -33,7 +33,7 @@ yum install -y httpd
 systemctl start httpd		
 systemctl enable httpd		
 echo "Hello I am your Web Server 1" > /var/www/html/index.html
-
+```
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/d9824aa4-2b01-40e9-81e7-1be835129839)
 
 Note : The above script creates an HTML page served by Apache HTTP Server.
@@ -62,7 +62,7 @@ Note : The above script creates an HTML page served by Apache HTTP Server.
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/3c903fde-7df4-4fad-aad9-805174010b4d)
 
 3.6 Enter the script in User Data in Advanced Settings
-
+```
 #!/bin/bash		
 sudo su		
 yum update -y		
@@ -70,7 +70,7 @@ yum install -y httpd
 systemctl start httpd		
 systemctl enable httpd	
 echo "Hello I am your Web Server 2" > /var/www/html/index.html	
-
+```
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/c71410ce-4d3e-4382-aaa5-b12b1273e6cc)
 
 * Click on Launch Instance
@@ -171,7 +171,7 @@ Default action: Select webserverTG from the drop-down menu
 * Scroll down to Bucket Policy and click on Edit button.
 * Paste the policy and replace the Bucket ARN in the code.
 
-'''
+```
 {		
 "Version": "2012-10-17",
     "Statement": [	
@@ -186,7 +186,7 @@ Default action: Select webserverTG from the drop-down menu
         }	
     ]		
 }	
-'''
+```
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/6c65fc5c-455d-40f1-b8ba-b1675110114f)
 
