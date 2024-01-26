@@ -81,7 +81,7 @@ echo "Hello I am your Web Server 2" > /var/www/html/index.html
 
 
 ###  Task 4 Creating a Target Group 
-4.1 Go to Target Groups in the left-side panel under Load Balancer in the Load Balancing section.
+4.1 Go to Target Groups in the left-side panel under Load Balancer in the Load Balancing section. Click on Create Target Group
 
 4.2 Choose Instances from Basic configuration
 
