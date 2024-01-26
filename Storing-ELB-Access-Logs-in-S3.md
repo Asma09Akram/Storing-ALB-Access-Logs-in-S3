@@ -37,6 +37,7 @@ echo "Hello I am your Web Server 1" > /var/www/html/index.html
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/d9824aa4-2b01-40e9-81e7-1be835129839)
 
 Note : The above script creates an HTML page served by Apache HTTP Server.
+2.8 Click on Launch Instance
 
 ### Task 3 Launch another instance
 
