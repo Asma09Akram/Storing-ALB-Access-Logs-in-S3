@@ -73,7 +73,8 @@ echo "Hello I am your Web Server 2" > /var/www/html/index.html
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/c71410ce-4d3e-4382-aaa5-b12b1273e6cc)
 
-
+* Click on Launch Instance
+  
 3.7 Go to the EC2 dashboard to see webserver-A and webserver-B running as shown below:
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/ac19d47f-0e32-4314-a2a0-7b91372ac2e2)
