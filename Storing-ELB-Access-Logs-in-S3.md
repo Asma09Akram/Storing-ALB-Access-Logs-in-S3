@@ -123,7 +123,9 @@ Success code : 200 (Default)
 
 ### Task 5 Creating an Application Load Balancer
 5.1 Navigate to Load Balancers in the left-side panel under Load Balancing. Create Load Balancer
+
 5.2 Choose Application Load Balancer since we are testing the high availability of the web application and click on Create button.
+
 5.3 Enter Web-Server-Load-Balancer
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/12738659-0cd2-4941-b2c1-60c31852b283)
