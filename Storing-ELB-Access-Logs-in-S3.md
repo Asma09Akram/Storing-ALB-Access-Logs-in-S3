@@ -41,7 +41,7 @@ Note : The above script creates an HTML page served by Apache HTTP Server.
 
 ### Task 3 Launch another instance
 
-3.1 give the name as demo web server 2
+3.1 Give the name as demo web server 2
 
 ![image](https://github.com/Asma09Akram/Storing-ELB-Access-Logs-in-S3/assets/124654068/1b3b744d-83e8-491a-96f1-b3aab6db939d)
 
